@@ -1,12 +1,14 @@
 package LukaszKutylowski.DiscountApp;
 
+import java.math.BigDecimal;
+
 public class PrintService {
-    public void printSummary(Client client, double priceBeforeDiscount, double priceAfterDiscount) {
+    public void printSummary(Client client, BigDecimal priceBeforeDiscount, BigDecimal priceAfterDiscount) {
         printWelcome(client);
         printDiscount(priceBeforeDiscount, priceAfterDiscount);
     }
 
-    private void printDiscount(double priceBeforeDiscount, double priceAfterDiscount) {
+    private void printDiscount(BigDecimal priceBeforeDiscount, BigDecimal priceAfterDiscount) {
         System.out.println("Kwota przed rabatem: " + priceBeforeDiscount);
         System.out.println("Do zapłaty po rabacie: " + priceAfterDiscount);
     }

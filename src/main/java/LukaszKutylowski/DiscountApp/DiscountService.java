@@ -1,7 +1,9 @@
 package LukaszKutylowski.DiscountApp;
 
+import java.math.BigDecimal;
+
 public class DiscountService {
-    public double calculateDiscountPrice(Client client, double price) {
+    public BigDecimal calculateDiscountPrice(Client client, BigDecimal price) {
         if (client.isClientPremium()) {
             return calculatePremiumDiscount(price);
         } else {
@@ -9,23 +11,23 @@ public class DiscountService {
         }
     }
 
-    double calculateStandardDiscount(double price) {
-        if (price > 1000) {
-            return applyDiscount(price, 0.1);
+    BigDecimal calculateStandardDiscount(BigDecimal price) {
+        if (price.compareTo(BigDecimal.valueOf(1000)) > 0) {
+            return applyDiscount(price, new BigDecimal(0.1));
         } else {
             return price;
         }
     }
 
-    double calculatePremiumDiscount(double price) {
-        if (price > 1000) {
-            return applyDiscount(price, 0.15);
+    BigDecimal calculatePremiumDiscount(BigDecimal price) {
+        if (price.compareTo(BigDecimal.valueOf(1000)) > 0) {
+            return applyDiscount(price, new BigDecimal(0.15));
         } else {
-            return applyDiscount(price, 0.05);
+            return applyDiscount(price, new BigDecimal(0.05));
         }
     }
 
-    private double applyDiscount(double price, double discount) {
-        return price * (1 - discount);
+    private BigDecimal applyDiscount(BigDecimal price, BigDecimal discount) {
+        return price.multiply(new BigDecimal(1).subtract(discount));
     }
 }

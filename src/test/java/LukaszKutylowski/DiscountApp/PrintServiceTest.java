@@ -1,12 +1,12 @@
 package LukaszKutylowski.DiscountApp;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
 
@@ -29,14 +29,14 @@ public class PrintServiceTest {
         //given
         final String expectedSummary =
                         "Witaj Jan Kowalski\r\n" +
-                        "Kwota przed rabatem: 1500.0\r\n" +
-                        "Do zapłaty po rabacie: 1275.0";
+                        "Kwota przed rabatem: 1500\r\n" +
+                        "Do zapłaty po rabacie: 1275";
         final String testFirstName = "Jan";
         final String testLastName = "Kowalski";
         final boolean testPremium = true;
         final Client testClient = new Client(testFirstName, testLastName, testPremium);
-        final double testPriceBeforeDiscount = 1500;
-        final double testPriceAfterDiscount = 1275;
+        final BigDecimal testPriceBeforeDiscount = new BigDecimal(1500);
+        final BigDecimal testPriceAfterDiscount = new BigDecimal(1275);
         //when
         service.printSummary(testClient, testPriceBeforeDiscount, testPriceAfterDiscount);
         String actualSummary = outputStream.toString().trim();
@@ -49,14 +49,14 @@ public class PrintServiceTest {
         //given
         final String expectedSummary =
                         "Witaj Jan\r\n" +
-                        "Kwota przed rabatem: 1500.0\r\n" +
-                        "Do zapłaty po rabacie: 1275.0";
+                        "Kwota przed rabatem: 1500\r\n" +
+                        "Do zapłaty po rabacie: 1275";
         final String testFirstName = "Jan";
         final String testLastName = null;
         final boolean testPremium = true;
         final Client testClient = new Client(testFirstName, testLastName, testPremium);
-        final double testPriceBeforeDiscount = 1500;
-        final double testPriceAfterDiscount = 1275;
+        final BigDecimal testPriceBeforeDiscount = new BigDecimal(1500);
+        final BigDecimal testPriceAfterDiscount = new BigDecimal(1275);
         //when
         service.printSummary(testClient, testPriceBeforeDiscount, testPriceAfterDiscount);
         String actualSummary = outputStream.toString().trim();
@@ -69,14 +69,14 @@ public class PrintServiceTest {
         //given
         final String expectedSummary =
                         "Dzień dobry Panie/Pani Kowalski\r\n" +
-                        "Kwota przed rabatem: 1500.0\r\n" +
-                        "Do zapłaty po rabacie: 1275.0";
+                        "Kwota przed rabatem: 1500\r\n" +
+                        "Do zapłaty po rabacie: 1275";
         final String testFirstName = null;
         final String testLastName = "Kowalski";
         final boolean testPremium = true;
         final Client testClient = new Client(testFirstName, testLastName, testPremium);
-        final double testPriceBeforeDiscount = 1500;
-        final double testPriceAfterDiscount = 1275;
+        final BigDecimal testPriceBeforeDiscount = new BigDecimal(1500);
+        final BigDecimal testPriceAfterDiscount = new BigDecimal(1275);
         //when
         service.printSummary(testClient, testPriceBeforeDiscount, testPriceAfterDiscount);
         String actualSummary = outputStream.toString().trim();
@@ -89,14 +89,14 @@ public class PrintServiceTest {
         //given
         final String expectedSummary =
                         "Witaj nieznajomy\r\n" +
-                        "Kwota przed rabatem: 1500.0\r\n" +
-                        "Do zapłaty po rabacie: 1275.0";
+                        "Kwota przed rabatem: 1500\r\n" +
+                        "Do zapłaty po rabacie: 1275";
         final String testFirstName = null;
         final String testLastName = null;
         final boolean testPremium = true;
         final Client testClient = new Client(testFirstName, testLastName, testPremium);
-        final double testPriceBeforeDiscount = 1500;
-        final double testPriceAfterDiscount = 1275;
+        final BigDecimal testPriceBeforeDiscount = new BigDecimal(1500);
+        final BigDecimal testPriceAfterDiscount = new BigDecimal(1275);
         //when
         service.printSummary(testClient, testPriceBeforeDiscount, testPriceAfterDiscount);
         String actualSummary = outputStream.toString().trim();
