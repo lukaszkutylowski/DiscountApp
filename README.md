@@ -21,9 +21,9 @@ This is an application which calculate discount for standard client and premium 
 *DiscountService* class contains *calculateDiscountPrice* API method and some private methods.
 *calculateDiscountPrice* method choose way to calculate discount: for standard client or premium client.
 *calculateStandardDiscount* is executed when clientPremium variable is false, *calculatePremuimDiscount* when is true.
-Discaunt is calculate when price is bigger than 1000. In this situation standard client get 10% discount, but in other situation 0%.
+Discount is calculate when price is bigger than 1000. In this situation standard client get 10% discount, but in other situation 0%.
 Premium client always get 5% discount, but when price is bigger than 1000 then discount is 15%.
-*applyDiscount* is reused mathod for all ways to calculate discount.
+*applyDiscount* is reused method for all ways to calculate discount.
 
 *Image shows DiscountApp class which realized calculations*
 ![alt text](/.readmeimages/image2.jpg)
@@ -40,4 +40,7 @@ In case when client object not contais name and surname, application shows *Wita
 
 *Image shows private methods which is used by API method of PrintService class*
 ![alt text](/.readmeimages/image4.jpg)
+
+*Image shows example result of application execution
+![alt text](/.readmeimages/image5.jpg)
 
