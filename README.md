@@ -1,8 +1,8 @@
-## **DiscountApp**
+# **DiscountApp**
 
 This is an application which calculate discount for standard client and premium client.
 
-# Used technologies:
+### Used technologies:
 * Java SE
 * Java Beans
 * Encapsulation
@@ -10,7 +10,7 @@ This is an application which calculate discount for standard client and premium 
 * OOP
 * Maven
 
-# Description
+### Description
 
 ![alt text](/.readmeimages/image1.jpg)
 
