@@ -41,6 +41,7 @@ In case when client object not contais name and surname, application shows *Wita
 *Image shows private methods which is used by API method of PrintService class*
 ![alt text](/.readmeimages/image4.jpg)
 
-*Image shows example result of application execution*
+*Image shows example result of application execution*:
+
 ![alt text](/.readmeimages/image5.jpg)
 
