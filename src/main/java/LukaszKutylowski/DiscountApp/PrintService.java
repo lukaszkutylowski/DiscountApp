@@ -1,6 +1,7 @@
 package LukaszKutylowski.DiscountApp;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PrintService {
     public void printSummary(Client client, BigDecimal priceBeforeDiscount, BigDecimal priceAfterDiscount) {
@@ -9,8 +10,8 @@ public class PrintService {
     }
 
     private void printDiscount(BigDecimal priceBeforeDiscount, BigDecimal priceAfterDiscount) {
-        System.out.println("Kwota przed rabatem: " + priceBeforeDiscount);
-        System.out.println("Do zapłaty po rabacie: " + priceAfterDiscount);
+        System.out.println("Kwota przed rabatem: " + priceBeforeDiscount.setScale(0, RoundingMode.HALF_UP));
+        System.out.println("Do zapłaty po rabacie: " + priceAfterDiscount.setScale(0, RoundingMode.HALF_UP));
     }
 
     private void printWelcome(Client client) {
