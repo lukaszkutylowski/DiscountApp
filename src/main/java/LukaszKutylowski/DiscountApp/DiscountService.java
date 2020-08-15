@@ -11,7 +11,7 @@ public class DiscountService {
         }
     }
 
-    BigDecimal calculateStandardDiscount(BigDecimal price) {
+    private BigDecimal calculateStandardDiscount(BigDecimal price) {
         if (price.compareTo(BigDecimal.valueOf(1000)) > 0) {
             return applyDiscount(price, new BigDecimal(0.1));
         } else {
@@ -19,7 +19,7 @@ public class DiscountService {
         }
     }
 
-    BigDecimal calculatePremiumDiscount(BigDecimal price) {
+    private BigDecimal calculatePremiumDiscount(BigDecimal price) {
         if (price.compareTo(BigDecimal.valueOf(1000)) > 0) {
             return applyDiscount(price, new BigDecimal(0.15));
         } else {
