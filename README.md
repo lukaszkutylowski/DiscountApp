@@ -14,15 +14,15 @@ This is an application which calculate discount for standard client and premium 
 
 
 
-# Image shows Client which is Java Beans class
+*Image shows Client which is Java Beans class*
 ![alt text](/.readmeimages/image1.jpg)
 
-# Image shows DiscountApp class which realized calculations
+*Image shows DiscountApp class which realized calculations*
 ![alt text](/.readmeimages/image2.jpg)
 
-# Image shows PrintService class with main method
+*Image shows PrintService class with main method*
 ![alt text](/.readmeimages/image3.jpg)
 
-# Image shows private methods which is used by main method of PrintService class
+*Image shows private methods which is used by main method of PrintService class*
 ![alt text](/.readmeimages/image4.jpg)
 
