@@ -12,5 +12,5 @@ This is an application which calculate discount for standard client and premium 
 
 # Description
 
-![alt text](image1.jpg)
+![alt text](/.readmeimages/image1.jpg)
 
